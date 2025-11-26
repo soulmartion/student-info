@@ -1,0 +1,59 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#f97316;
+  --muted:#9aa4b2;
+  --radius:12px;
+  --maxw:420px;
+  --gap:12px;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background: linear-gradient(200deg,#04226d 25%, #2d0a0a 110%);
+  color:#e6eef8;
+  display:flex;align-items:center;justify-content:center;padding:24px;
+}
+
+.container{
+  width:100%;max-width:var(--maxw);
+  background:linear-gradient(180deg, rgba(39, 28, 162, 0.02), rgba(138, 81, 81, 0.01));
+  border-radius:16px;padding:20px;
+  box-shadow:0 8px 30px rgba(94, 43, 211, 0.6);
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.top{display:flex;gap:12px;align-items:center}
+.avatar{
+  width:72px;height:72px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent), #60a5fa);
+  display:grid;place-items:center;font-weight:700;color:#071023;
+  font-size:22px;
+}
+.title-block h1{font-size:18px;margin-bottom:4px}
+.title-block p{color:var(--muted);font-size:13px}
+
+.links{display:flex;flex-direction:column;gap:var(--gap);margin:18px 0}
+
+.btn{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 14px;border-radius:12px;text-decoration:none;color:inherit;
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,8,30,0.5)}
+.icon{
+  width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.03);
+  display:grid;place-items:center;font-weight:700;
+}
+
+.small{padding:8px 10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);cursor:pointer}
+.primary{padding:10px 12px;border-radius:10px;background:var(--accent);border:0;color:#031220;cursor:pointer;font-weight:700}
+
+.footer{display:flex;gap:10px;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+@media (max-width:420px){
+  .avatar{width:60px;height:60px;font-size:18px}
+  .container{padding:16px}
+}
+
